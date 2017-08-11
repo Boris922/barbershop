@@ -7,7 +7,7 @@
 
     <label>Ваше имя</label>
     
-      <input name="username" type="text" class="form-control"  placeholder="ИМЯ" value="<%= @aaa %>">
+      <input name="username" type="text" class="form-control"  placeholder="ИМЯ">
     </div>
   	
   	 
@@ -15,7 +15,7 @@
 
     <label>Ваш телефон</label>
     
-      <input name="phone" type="text" class="form-control" placeholder="Телефон" value="<%= @bbb %>">
+      <input name="phone" type="text" class="form-control" placeholder="Телефон">
     </div>
 	
 	
@@ -24,14 +24,14 @@
 
     <label>Время</label>
     
-      <input name="time" type="text" class="form-control" placeholder="Время" value="<%= @ccc %>">
+      <input name="time" type="text" class="form-control" placeholder="Время">
     </div>
 
 
  <div class="form-group">
 
     <label>Ваш парикмахер:</label>
-    <select name="barber" class="form-control" >
+    <select name="barber" class="form-control">
       <option>Jessie</option>
       <option>Walter</option>
       <option>Gus</option>
@@ -42,7 +42,7 @@
  <div class="form-group">
 
     <label>Цвет краски:</label>
-    <select id="color" name="color>
+    <select id="color" name="color">
     
         <option value="#7bd148">Green</option>
         <option value="#5484ed">Bold blue</option>
@@ -63,14 +63,10 @@
 
  
   
-	<button type="submit" class="btn btn-primary">Нажми эту штуку</button>
+	<button type="submit" class="btn btn-primary">Нажми это</button>
 
 </form>
 
 <script type="text/javascript">
-
-$(function(){
-    $('#color').simplecolorpicker();
-  });
-
+  $('#color').simplecolorpicker();
 </script>

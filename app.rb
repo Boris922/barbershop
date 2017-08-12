@@ -7,8 +7,8 @@ require 'sqlite3'
 configure  do
 
 	@db = SQLite3::Database.new 'barberchop.db'
-	@db.execute 'CREATE TABLE
-	`users` (`id`	INTEGER PRIMARY KEY AUTOINCREMENT,
+	@db.execute 'CREATE TABLE  `users`
+	 (`id`	INTEGER PRIMARY KEY AUTOINCREMENT,
 	`username`TEXT,`phone`	TEXT,`datestamp`	TEXT,
 	`barber`	TEXT, `color`	TEXT
 	);'

@@ -9,12 +9,12 @@ configure  do
 	@db.execute 'CREATE TABLE IF NOT EXISTS 
 	"users" 
 	(
-			`Id`	INTEGER PRIMARY KEY AUTOINCREMENT,
-			`username`	TEXT,
-			`phone`	TEXT,
-			`time`	TEXT,
-			`barber`	TEXT,
-			`color`	TEXT
+			"Id"	INTEGER PRIMARY KEY AUTOINCREMENT,
+			"username"	TEXT,
+			"phone"	TEXT,
+			"time"	TEXT,
+			"barber"	TEXT,
+			"color"	TEXT
 	)'
 end
 get '/' do
@@ -59,7 +59,7 @@ db.execute 'insert into users
 	  		barber, 
 	   		color
 	   	)
-		values (?,?,?,?,?)', [@username, @phone, @datetime, @barber, @color]
+		values (?,?,?,?,?)', [@aaa, @bbb, @ccc, @ddd, @eee]
 
 	
 

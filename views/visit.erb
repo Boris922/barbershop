@@ -1,6 +1,8 @@
 <h2>Записаться!!!</h2>
 <p>На этой странице можно записаться!</p>
 
+
+
 <form action="/visit" method="POST" class="form-horizontal">
 
   <div class="form-group">
@@ -24,7 +26,7 @@
 
     <label>Время</label>
 
-      <input name="time" type="text" class="form-control" placeholder="Время">
+      <input id="datetimepicker"  type="text" class="form-control" placeholder="Время">
     </div>
 
 
@@ -67,6 +69,10 @@
 
 </form>
 
+
 <script type="text/javascript">
+$(function() {
   $('#color').simplecolorpicker();
+  $('#datetimepicker').datetimepicker();
+});
 </script>

@@ -5,14 +5,17 @@ require 'sinatra/reloader'
 require 'sqlite3'
 
 configure  do
-
-	@db = SQLite3::Database.new 'barberchop.db'
-	@db.execute 'CREATE TABLE  `users`
-	 (`id`	INTEGER PRIMARY KEY AUTOINCREMENT,
-	`username`TEXT,`phone`	TEXT,`datestamp`	TEXT,
-	`barber`	TEXT, `color`	TEXT
-	);'
-
+	db = get_db
+	@db.execute 'CREATE TABLE IF NOT EXISTS 
+	"users" 
+	(
+			`Id`	INTEGER PRIMARY KEY AUTOINCREMENT,
+			`username`	TEXT,
+			`phone`	TEXT,
+			`time`	TEXT,
+			`barber`	TEXT,
+			`color`	TEXT
+	)'
 end
 get '/' do
 
@@ -47,7 +50,24 @@ post '/visit' do
 			end
 		end
 
+db = get_db
+db.execute 'insert into users 
+		(
+			username,
+			phone,
+	  		time,
+	  		barber, 
+	   		color
+	   	)
+		values (?,?,?,?,?)', [@username, @phone, @datetime, @barber, @color]
+
+	
+
 		erb "OK!, username is #{@aaa}, #{@bbb}, #{@ccc}, #{@ddd}, #{@eee}"
 
 
+end
+
+def get_db
+	return SQLite3::Database.new 'barbershop.db'
 end

@@ -75,6 +75,6 @@ db.execute 'insert into users
 end
 
 get '/showusers' do
-  erb "Hello World"
+  erb :showusers
 end
 

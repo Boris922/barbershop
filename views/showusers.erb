@@ -1,5 +1,5 @@
 
-	<table class="tabletable-striped">
+	<table class="table table-striped">
 		<thead>
 			<tr>
 				<th>Имя</th>
@@ -10,18 +10,18 @@
 			</tr>
 		</thead>
 			
-	<body>
+	<tbody>
 		<% @results.each do |row| %>
 			<tr>
 				<td><%= row['username'] %></td>
 				<td><%= row['phone'] %></td>
 				<td><%= row['time'] %></td>
 				<td><%= row['barber'] %></td>
-				<td><%= row['color'] %></td>
+				<td style="background-color: <%= row['color'] %>"><%= row['color'] %></td>
 			</tr>
-	</body>
+		<% end %>
+	</tbody>
 
 	
-		
-	<% end %>
+	
 	</table>

@@ -104,6 +104,8 @@ db.execute 'insert into users
 
 		erb "OK!, username is #{@aaa}, #{@bbb}, #{@ccc}, #{@ddd}, #{@eee}"
 
+	erb "<h1>Спасибо, вы записаны</h1>"
+
 
 end
 
